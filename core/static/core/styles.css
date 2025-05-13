@@ -1,0 +1,74 @@
+a{
+    text-decoration: none;
+}
+
+select{
+   appearance: none ;
+}
+
+
+body{
+    display: grid;
+    grid-template-rows:  max-content 70vh minmax(10vh, max-content);
+    grid-template-areas: 'header' 'main' 'footer';
+    background-color: green;
+    margin: 0;
+    gap:0.75em
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+    padding: 1em;
+   
+
+}
+
+#navHeader{
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    gap: 2vw;
+    padding: .25em;
+    font-size: 3vw;
+}
+
+#headerMenu{
+    border: none;
+    background: none;
+    white-space: none;
+    cursor: pointer;
+   
+}
+
+#brandLogoHeader{
+    border-radius: .25em;
+    background-color: rgb(213, 106, 240);
+    display: block;
+    justify-items: center;
+    align-content: center;
+    height: 8vh;
+    width: 50vw;
+    cursor: pointer;
+    }
+
+main{
+    border-radius: .5em;
+    background-color: white;
+    opacity: 50%;
+    grid-area: main;
+    display: flex;
+    margin: 1em;
+    padding: 0.5em;
+    
+}
+
+footer{
+    background-color: black;
+    color: white;
+    grid-area: footer;
+    display: flex; 
+}
