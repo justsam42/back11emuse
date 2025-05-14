@@ -18,3 +18,6 @@ def indexHome(request):
 
 def aboutPage(request):
     return render(request, "core/about.html")
+
+def servicesPage(request):
+    return render(request, "core/services.html")

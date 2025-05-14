@@ -1,10 +1,28 @@
 {% extends "core/layout.html" %}
+{% load static %}
+
+<!-- This is HOME page -->
 
 {% block main %}
 <main> 
-    <div class="focus-1">This is the HOME page</div>
-    <div class="focus-2"></div>
-    <div class="focus-3"></div>
+    <div class="focus-1" id="hero-section">
+        <img id="image-heroSection" src="{% static 'core/femme-foulard-yeux-plafond.jpg'%}"/>
+        <div id="content-heroSection">
+            <h2>Donnez vie à vos idées !</h2>
+            <a href="#">Evaluer mes besoins</a>
+            <a href="{% url 'core:services' %}">En savoir plus</a>
+        </div>
+        
+    </div>
+    <div class="focus-2" id="solutions-section">
+        <h3>Différents accompagnements</h3>
+        <div>
+            <div>Cible 1</div>
+            <div>Cible 2</div>
+            <div>Cible 3</div>
+        </div>
+    </div>
+    <div class="focus-3" id="problems-section"></div>
 </main>
 {% endblock %}
 

@@ -1,11 +1,12 @@
 a{
     text-decoration: none;
+    color : unset
+    
 }
 
 select{
    appearance: none ;
 }
-
 
 body{
     display: grid;
@@ -23,14 +24,14 @@ header{
     align-items: center;
     gap: 10vw;
     padding: 1em;
-   
-
+    background-color: rgb(141, 84, 201);
 }
 
 #navHeader{
     display: flex;
     justify-content: flex-end;
     align-items: start;
+    color: white;
     gap: 2vw;
     padding: .25em;
     font-size: 3vw;
@@ -46,7 +47,7 @@ header{
 
 #brandLogoHeader{
     border-radius: .25em;
-    background-color: rgb(91, 79, 135);
+    background-color: white;
     display: block;
     justify-items: center;
     align-content: center;
@@ -56,11 +57,9 @@ header{
     }
 
 main{
-    border-radius: .5em;
-    background-color: rgb(145, 232, 213);
-    opacity: 50%;
+
     grid-area: main;
-    display: flex;
+    display: grid;
     margin: 1em;
     padding: 0.5em;
     

@@ -6,11 +6,11 @@
         <title>This a test</title>
         <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
     </head>
-    <body>
+    <body >
         <header>
-            <div id="brandLogoHeader">
-                <a href="{% url 'core:index' %}">Logo Cliquable</a>
-            </div>
+            <a id="brandLogoHeader"  href="{% url 'core:index' %}">
+                <h3>Logo Cliquable</h3>
+            </a>
             <div id="navHeader">
                 <select id="headerMenu">
                     <option>MENU</option>
@@ -23,14 +23,14 @@
             </div>
         </header>
 
-        <main> 
+        <main > 
             <div class="focus-1">This is the Blog</div>
             <div class="focus-2"></div>
             <div class="focus-3"></div>
         </main>
         
         <footer>
-            <h1>This is a fixed part</h1>
+            <h3>This is a fixed part</h3>
         </footer>
     </body>
 </html>

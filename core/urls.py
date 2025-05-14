@@ -7,5 +7,6 @@ app_name="core"
 
 urlpatterns= [
     path("", views.indexHome, name="index"),
-    path("about", views.aboutPage, name="about")
+    path("about", views.aboutPage, name="about"),
+    path("services", views.servicesPage, name="services")
 ]
