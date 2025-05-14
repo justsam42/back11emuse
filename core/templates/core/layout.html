@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>This a test</title>
+        <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    </head>
+    <body>
+        <header>
+            <div id="brandLogoHeader">
+                <a href="{% url 'core:index' %}">Logo Cliquable</a>
+            </div>
+            <div id="navHeader">
+                <select id="headerMenu">
+                    <option>MENU</option>
+                    <option>Foo</option>
+                    <option>Baz</option>
+                    <option>Bar</option>
+                </select>
+                <a href="#">Offre</a>
+                <a href="{% url 'blog:index' %}">Blog</a>
+                <a href="{% url 'core:about' %}">About</a>
+            </div>
+        </header>
+
+        {% block main %}
+        {% endblock %}
+        
+        <footer>
+            <h1>This is a fixed part</h1>
+        </footer>
+    </body>
+</html>
+

@@ -15,3 +15,6 @@ def indexHome2(request, format=None):
 
 def indexHome(request):
     return render(request, "core/index.html")
+
+def aboutPage(request):
+    return render(request, "core/about.html")
