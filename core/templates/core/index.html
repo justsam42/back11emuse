@@ -6,23 +6,33 @@
 {% block main %}
 <main> 
     <div class="focus-1" id="hero-section">
-        <img id="image-heroSection" src="{% static 'core/femme-foulard-yeux-plafond.jpg'%}"/>
-        <div id="content-heroSection">
-            <h2>Donnez vie à vos idées !</h2>
-            <a href="#">Evaluer mes besoins</a>
-            <a href="{% url 'core:services' %}">En savoir plus</a>
-        </div>
-        
+        <h1>Donnez vie à vos idées !</h1>
+        <div id="cta-heroSection">
+            <a class="cta-btn" href="#">Définir mes besoins</a>
+            <a class="ghost-btn" href="{% url 'core:services' %}">En savoir plus</a>
+        </div>    
     </div>
-    <div class="focus-2" id="solutions-section">
-        <h3>Différents accompagnements</h3>
-        <div>
-            <div>Cible 1</div>
-            <div>Cible 2</div>
-            <div>Cible 3</div>
+    <div id="value-prop">
+        <div class="focus-3" id="problems-section">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        </div>
+        <div class="focus-2">
+            <h2>Différents accompagnements</h2>
+            <div id="targets-section">
+                <a class="trgt-btn" href="#">J'ai un projet !</a>
+                <a class="trgt-btn" href="#">J'ai une idée !</a>
+                <a class="trgt-btn" href="#">Je veux du changement !</a>
+            </div>
         </div>
     </div>
-    <div class="focus-3" id="problems-section"></div>
+    <div class="focus-3" id="contact-section">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+    </div>
+    
 </main>
 {% endblock %}
 

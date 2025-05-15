@@ -1,21 +1,31 @@
-a{
-    text-decoration: none;
-    color : unset
-    
-}
-
-select{
-   appearance: none ;
-}
+/* -------MISE EN PAGE ------------ */
 
 
 body{
     display: grid;
-    grid-template-rows:  max-content 70vh minmax(10vh, max-content);
+    grid-template-rows: minmax(min-content, max-content) 1fr minmax(min-content, max-content);
     grid-template-areas: 'header' 'main' 'footer';
     background-color: white;
     margin: 0;
-    gap:0.75em
+    gap:0.75em;
+    height:100vh
+}
+
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(min-content, 100%));
+
+
+    
+}
+
+footer{
+    background-color: rgb(49, 31, 85);
+    color: white;
+    grid-area: footer;
+    display: flex; 
 }
 
 header{
@@ -29,11 +39,13 @@ header{
 
 }
 
+/* -------HEADER ELEMENTS------------ */
+
 #navHeader{
     display: flex;
     justify-content: flex-end;
     align-items: start;
-    color: rgb(141, 84, 201);
+    color: rgb(49, 31, 85);
     gap: 2vw;
     padding: .25em;
     font-size: 3vw;
@@ -58,47 +70,121 @@ header{
     cursor: pointer;
     }
 
-main{
-    grid-area: main;
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(50vh, max-content));
+/* -----------------------Page content------------ */
 
-    
-}
+/* -------Hero Section------------ */
 
-#hero-section{
+ #hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 4vw;
+    padding-top: 2vh;
+    color:rgb(49, 31, 85);
+    background-image: url('./femme-foulard-yeux-plafond.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 45vmin;
    
 }
 
 
-#image-heroSection{
-    position: absolute;
-    max-width: 99vw;
-    z-index : -5
+#cta-heroSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:2vw;
+    padding:.25em;
+    font-weight:bold;
+    
 }
-#content-heroSection{
+
+/* ------ Primary Content ------------ */
+#value-prop{
+    background-color: rgb(183, 255, 239);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+    gap:4vw;
+    padding:2vw;
+    text-wrap: wrap;
+}
+
+ 
+.focus-2{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-left: 4vw 
+    align-items: center;
+    justify-content: flex-start;
+} 
+
+#targets-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.focus-2{
-    background-color: rgb(145, 232, 213);
+
+.focus-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+} 
+
+/* -------  UI ------------ */
+a{
+    text-decoration: none;
+    color : unset
+    
 }
 
-footer{
+select{
+   appearance: none ;
+}
+
+
+.cta-btn{
+    border : 0.25vmin solid rgb(49, 31, 85);
+    background-color: rgb(183, 255, 239);
+    border-radius: 1em;
+    padding: 0.5em;
+
+
+}
+
+.ghost-btn{
+    border : 0.25vmin solid rgb(183, 255, 239);
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+.cta-btn:hover, .ghost-btn:hover{
+    border : 0.25vmin solid  rgb(183, 255, 239);
     background-color: rgb(49, 31, 85);
-    color: white;
-    grid-area: footer;
-    display: flex; 
+    border-radius: 1em;
+    padding: 0.5em;
+    color: rgb(183, 255, 239);
 }
+
+
+/* -------Typographies----------- */
+
 
 h1{
-    font-size: 6vw;
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 1.5vh;
 }
 
 h2{
-    font-size: 4vw;
+    font-size: 3.5vw;
+    margin-bottom: 1vh;
 }
+h3{
+    font-size: 2vw;
+    margin-bottom: 0.5vh;
+}
+
+
