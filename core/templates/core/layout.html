@@ -4,7 +4,9 @@
 <html lang="en">
     <head>
         <title>This a test</title>
-        <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'core/styles/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'core/styles/index.css' %}">
+        <link rel="stylesheet" href="{% static 'core/styles/services.css' %}">
     </head>
     <body>
         <header>
@@ -19,7 +21,7 @@
                     <option>Baz</option>
                     <option>Bar</option>
                 </select>
-                <a href="{% url 'core:services' %}">Offre</a>
+                <a href="{% url 'core:services' %}">Services</a>
                 <a href="{% url 'blog:index' %}">Blog</a>
                 <a href="{% url 'core:about' %}">About</a>
             </div>

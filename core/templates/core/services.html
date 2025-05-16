@@ -4,11 +4,82 @@
 
 {% block main %}
 <main> 
-    <h2>Différents accompagnements</h2>
-    <div>
-        <div>Cible 1</div>
-        <div>Cible 2</div>
-        <div>Cible 3</div>
+    <div class="focus-1" id="banner-services">
+        <h1>Services</h1>
+        <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+        <div id="cta-banner-services">
+            <a class="cta-btn mirror-theme" href="#"
+                >Définir mes besoins</a>
+            <a class="ghost-btn mirror-theme" href="{% url 'core:services' %}"
+                >Explorer les services</a>
+        </div>    
+    </div>
+    <div class="focus-2" id="resume-services">
+        <h2>A chaque personne, son besoin ^_^</h2>
+        <div  id="services-list">
+            <div class="infos-cta"  id="secondary-target">
+                <h3>Cible secondaire</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+                <a class="cta-btn" href="#"
+                    >+ d'infos</a>
+            </div>
+            <div class="infos-cta" id="main-target">
+                <h3>Coeur de cible</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+                <a class="cta-btn" href="#"
+                    >+ d'infos</a>
+            </div>
+            <div class="infos-cta"  id="prospects">
+                <h3>Convertibles</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+                <a class="cta-btn" href="#"
+                    >+ d'infos</a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="focus-3" id="contact-section">
+        <div id="contact-hero">
+            <h2>Contact</h2>
+            <div id="photo-contact">Photo de moi</div>
+        </div>
+        <div id="msg-container">
+            <fieldset id="infos-msg">
+                <legend>A propos de vous...</legend>
+                <input 
+                    type="text"
+                    name="first-name" 
+                    placeholder="Prénom"/>
+                <input 
+                    type="text" 
+                    name="last-name" 
+                    placeholder="Nom"/>
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Adresse electronique"/>
+                <input 
+                    type="text" 
+                    list="msg-object" 
+                    placeholder="L'objet de votre message est..."
+                />
+                    <datalist id="msg-object">
+                        <option value="Je ne trouve pas une information.">
+                        <option value="J'ai un besoin particulier."></option>
+                        <option value="Je souhaite établir un partenariat."></option>
+                    </datalist>
+            </fieldset>
+            <textarea name="msg" id="msg-content" 
+                rows="12" columns="64" 
+                required="true"
+                autocapitalize="sentences"
+            > Votre message</textarea>
+            <input 
+                type="submit"/>
+        </div> 
     </div>
 </main>
 {% endblock %}
