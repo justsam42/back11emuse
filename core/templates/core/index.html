@@ -8,8 +8,10 @@
     <div class="focus-1" id="hero-section">
         <h1>Donnez vie à vos idées !</h1>
         <div id="cta-heroSection">
-            <a class="cta-btn" href="#">Définir mes besoins</a>
-            <a class="ghost-btn" href="{% url 'core:services' %}">En savoir plus</a>
+            <a class="cta-btn" href="#"
+                >Définir mes besoins</a>
+            <a class="ghost-btn" href="{% url 'core:services' %}"
+                >En savoir plus</a>
         </div>    
     </div>
     <div id="value-prop">
@@ -21,16 +23,55 @@
         <div class="focus-2">
             <h2>Différents accompagnements</h2>
             <div id="targets-section">
-                <a class="trgt-btn" href="#">J'ai un projet !</a>
-                <a class="trgt-btn" href="#">J'ai une idée !</a>
-                <a class="trgt-btn" href="#">Je veux du changement !</a>
+                <a class="trgt-btn" href="#"
+                    >J'ai un projet !</a>
+                <a class="trgt-btn" href="#"
+                    >J'ai une idée !</a>
+                <a class="trgt-btn" href="#"
+                    >Je veux du changement !</a>
             </div>
         </div>
     </div>
     <div class="focus-3" id="contact-section">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <div id="contact-hero">
+            <h2>Contact</h2>
+            <div id="photo-contact">Photo de moi</div>
+        </div>
+        <div id="msg-container">
+            <fieldset id="infos-msg">
+                <legend>A propos de vous...</legend>
+                <input 
+                    type="text"
+                    name="first-name" 
+                    placeholder="Prénom"/>
+                <input 
+                    type="text" 
+                    name="last-name" 
+                    placeholder="Nom"/>
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Adresse electronique"/>
+                <input 
+                    type="text" 
+                    list="msg-object" 
+                    placeholder="L'objet de votre message est..."
+                />
+                    <datalist id="msg-object">
+                        <option value="Je ne trouve pas une information.">
+                        <option value="J'ai un besoin particulier."></option>
+                        <option value="Je souhaite établir un partenariat."></option>
+                    </datalist>
+            </fieldset>
+            <textarea name="msg" id="msg-content" 
+                rows="12" columns="64" 
+                required="true"
+                autocapitalize="sentences"
+            > Votre message</textarea>
+            <input 
+                type="submit"/>
+        </div>
+        
     </div>
     
 </main>

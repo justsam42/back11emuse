@@ -116,22 +116,67 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    border: 1px dotted black;
+    min-width: max-content;
 } 
 
 #targets-section{
+    border: 1px dotted black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    margin:1em;
+    height: 100%;
+    
+
 }
 
+#trgt-btn{
+
+}
 
 .focus-3{
     display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+} 
+
+#contact-hero{
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-} 
+    padding: 2em;
+    gap : 1vh;
+}
+
+#photo-contact{
+    display:block;
+    height: 300px;
+    width : 250px;
+    background-color: rgb(49, 31, 85);
+}
+
+#infos-msg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2em;
+    gap : 1vh;
+}
+
+#msg-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2em;
+    gap : 1vh;
+}
+
+
 
 /* -------  UI ------------ */
 a{
@@ -142,6 +187,10 @@ a{
 
 select{
    appearance: none ;
+}
+
+fieldset{
+    border: 0.25vmin solid rgb(49, 31, 85);
 }
 
 
@@ -175,16 +224,17 @@ select{
 h1{
     font-size: 5vw;
     font-weight: bold;
-    margin-bottom: 1.5vh;
+    margin: 0.5vh 0.25vw;
 }
 
 h2{
     font-size: 3.5vw;
-    margin-bottom: 1vh;
+    margin: 0.5vh 0.25vw;
 }
 h3{
     font-size: 2vw;
-    margin-bottom: 0.5vh;
+    margin: 0.5vh 0.25vw;
+
 }
 
 
