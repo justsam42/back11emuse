@@ -1,37 +1,19 @@
+{% extends "blog/layout.html" %}
 {% load static %}
-<!DOCTYPE html>
 
-<html lang="en">
-    <head>
-        <title>This a test</title>
-        <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
-    </head>
-    <body >
-        <header>
-            <a id="brandLogoHeader"  href="{% url 'core:index' %}">
-                <h3>Logo Cliquable</h3>
-            </a>
-            <div id="navHeader">
-                <select id="headerMenu">
-                    <option>MENU</option>
-                    <option>Foo</option>
-                    <option>Baz</option>
-                    <option>Bar</option>
-                </select>
-                
-                <a href="{% url 'core:about' %}">About</a>
-            </div>
-        </header>
-
-        <main > 
-            <div class="focus-1">This is the Blog</div>
-            <div class="focus-2"></div>
-            <div class="focus-3"></div>
-        </main>
-        
-        <footer>
-            <h3>This is a fixed part</h3>
-        </footer>
-    </body>
-</html>
-
+{% block main%}
+<main id="mag-cover">
+    <div id="une-couv" style="font-size: 4vh;">Sujet à la une = Primary content coeur de cible</div>
+    <div id="magContent-glimpse">
+        <h1>Primary content cible secondaire</h1>
+        <h2>Clickbait prospects en lien avec la une</h2>
+        <h3>Secondary content coeur de cible</h3>
+        <div id="regContent-topics">
+            <h3>sujets des contenus habituels</h3>
+            <a href="#">Tips</a>
+            <a href="#">Decouverte</a>
+            <a href="#">CTA => transfo</a>
+        </div>  
+    </div>
+</main>
+{% endblock %}

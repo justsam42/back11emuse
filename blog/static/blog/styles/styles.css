@@ -10,21 +10,33 @@ select{
 
 body{
     display: grid;
-    grid-template-rows:  max-content 70vh minmax(10vh, max-content);
+    grid-template-rows:  minmax(max-content, 10vh) minmax(70vh, 80vh) minmax(5vh, max-content);
     grid-template-areas: 'header' 'main' 'footer';
-    background-color: white;
+   background-color: rgb(49, 31, 85);
     margin: 0;
-    gap:0.75em
 }
 
 header{
     grid-area: header;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+#brand-header{
+    display: flex;
     align-items: center;
-    gap: 10vw;
-    padding: 1em;
-    background-color: rgb(141, 84, 201);
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+#mag-menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    max-height: min-content;
+    padding: .25em 1em;
+    font-size: 1.5vh;
 }
 
 #navHeader{
@@ -57,11 +69,10 @@ header{
     }
 
 main{
-
     grid-area: main;
     display: grid;
-    margin: 1em;
-    padding: 0.5em;
+    margin: 0;
+    padding: .5em;
     
 }
 
@@ -70,4 +81,5 @@ footer{
     color: white;
     grid-area: footer;
     display: flex; 
+    padding: .5em;
 }

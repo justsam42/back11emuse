@@ -26,6 +26,7 @@ footer{
     color: white;
     grid-area: footer;
     display: flex; 
+    
 }
 
 header{

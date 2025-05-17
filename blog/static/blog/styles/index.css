@@ -1,0 +1,5 @@
+#mag-cover{
+    background-image: url('../assets/femme-multicolore.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
