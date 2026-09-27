@@ -5,13 +5,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding-left: 4vw;
-    padding-top: 2vh;
+    padding: 1vh 1vw 1vh 2vw;
     color:rgb(49, 31, 85);
-    background-image: url('../assets/femme-foulard-yeux-plafond.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 45vmin;
+    background-color: rgb(241, 127, 211);
+/*     background-image: url('../assets/femme-foulard-yeux-plafond.jpg');
+     background-size: cover;
+    background-repeat: no-repeat;*/
+    min-height: 30%;
    
 }
 
@@ -27,45 +27,35 @@
 }
 
 /* ------ Primary Content ------------ */
-#value-prop{
+
+.trgt-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5em;
+    background-color: rgb(86, 222, 154);
+    padding: 0.5em;
+}
+
+#btm-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px dotted black;
+    padding: 0.5em;
+    gap: 1vh;
+}
+
+/* #value-prop{
     background-color: rgb(183, 255, 239);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
     gap:4vw;
     padding:2vw;
     text-wrap: wrap;
-}
+} */
 
- 
-.focus-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    border: 1px dotted black;
-    min-width: max-content;
-} 
-
-#targets-section{
-    border: 1px dotted black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin:1em;
-    height: 100%;
-    
-}
-
-#trgt-btn{
-
-}
-
-.focus-3{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-} 
 
 #contact-hero{
     display: flex;

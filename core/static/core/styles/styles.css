@@ -3,12 +3,11 @@
 
 body{
     display: grid;
-    grid-template-rows: minmax(min-content, max-content) 1fr minmax(min-content, max-content);
+    grid-template-rows: 10% 1fr minmax(min-content, max-content);
     grid-template-areas: 'header' 'main' 'footer';
     background-color: white;
     margin: 0;
-    gap:0.75em;
-    height:100vh
+    height:100%
 }
 
 
@@ -34,8 +33,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10vw;
-    padding: 1em;
+    gap: 10vh;
+    padding: 0 .5em 0 .5em;
    
 
 }
@@ -48,7 +47,6 @@ header{
     align-items: start;
     color: rgb(49, 31, 85);
     gap: 2vw;
-    padding: .25em;
     font-size: 3vw;
 }
 
@@ -67,9 +65,26 @@ header{
     justify-items: center;
     align-content: center;
     height: 8vh;
-    width: 50vw;
+    width: 20vw;
     cursor: pointer;
     }
+
+/* -------  Main elements ------------ */
+.focus-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 1em;
+    gap : 3vw;
+} 
+
+.focus-3{
+    background-color: rgb(183, 255, 239);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+} 
 
 /* -------  UI ------------ */
 a{

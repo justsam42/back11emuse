@@ -1,0 +1,46 @@
+{% extends "core/layout.html" %}
+
+{% block landing %}
+    <div>This is the CONTACT page</div>
+    <div class="focus-3" id="contact-section">
+        <div id="contact-hero">
+            <h2>Contact</h2>
+            <div id="photo-contact">Photo de moi</div>
+        </div>
+        <div id="msg-container">
+            <fieldset id="infos-msg">
+                <legend>A propos de vous...</legend>
+                <input 
+                    type="text"
+                    name="first-name" 
+                    placeholder="Prénom"/>
+                <input 
+                    type="text" 
+                    name="last-name" 
+                    placeholder="Nom"/>
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Adresse electronique"/>
+                <input 
+                    type="text" 
+                    list="msg-object" 
+                    placeholder="L'objet de votre message est..."
+                />
+                    <datalist id="msg-object">
+                        <option value="Je ne trouve pas une information.">
+                        <option value="J'ai un besoin particulier."></option>
+                        <option value="Je souhaite établir un partenariat."></option>
+                    </datalist>
+            </fieldset>
+            <textarea name="msg" id="msg-content" 
+                rows="12" columns="64" 
+                required="true"
+                autocapitalize="sentences"
+            > Votre message</textarea>
+            <input 
+                type="submit"/>
+        </div>
+        
+    </div>
+{% endblock %}

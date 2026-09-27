@@ -26,10 +26,13 @@
                 <a href="{% url 'core:about' %}">About</a>
             </div>
         </header>
+        <main>
+            {% block landing %}
+            {% endblock %}
 
-        {% block main %}
-        {% endblock %}
-        
+            {% block scrolling %}
+            {% endblock %}
+        </main>
         <footer>
             <h3>This is a fixed part</h3>
         </footer>
