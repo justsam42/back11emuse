@@ -3,10 +3,15 @@
 
 <!-- This is HOME page -->
 
+{% block pageHeader%}
+<a id="brandLogoHeader"  href="{% url 'core:index' %}">
+    <img id="logo-full"/>
+</a>
+{% endblock %}
+
 {% block landing %}
 <div class="focus-1" id="hero-section">
-    <h1>Donnez vie à vos idées !</h1>
-    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+    <h1>Ne croyez pas en l'impossible, croyez en vous !</h1>
     <div id="cta-heroSection">
         <a class="cta-btn" href="#">Définir mes besoins</a>
         <a class="ghost-btn" href="{% url 'core:services' %}">En savoir plus</a>
@@ -15,15 +20,15 @@
 <div class="focus-2" id="targets-section">
     <a class="trgt-btn" id="target-1" href="#">
         <h3 >Une idée ?</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <p class="trgt-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
     </a>
     <a class="trgt-btn" id="target-2" href="#">
         <h3>Un projet ?</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <p class="trgt-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
     </a>
     <a class="trgt-btn" id="target-3" href="#">
         <h3>Un besoin ? </h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <p class="trgt-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
     </a>
 </div>
 
@@ -34,6 +39,65 @@
     </div>
     <h2>Phrase d'accroche</h2>
     <img height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>
+</div>
+{% endblock %}
+
+{% block scrolling %}
+<!-- user clicking ou scrolling pour plus d'infos -->
+<div id="scrolling-sections">
+
+    <div id="idee-hero">
+        <h4>Phrase d'accroche</h4>
+        <img class="illu-section"/>
+        <img id="logo-1"/>
+    </div>
+    <div class="section" id="idee-CTA">
+        <h3>Vous avez une idée et souhaitez la concrétiser ?</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <div id="idee-btns">
+            <button>Formaliser mon idée</button>
+            <button>Toutes les solutions</button>
+        </div>
+    </div>
+
+    <div id="projet-hero">
+        <h4>Phrase d'accroche</h4>
+        <img class="illu-section"/>
+        <img id="logo-2"/>
+    </div>
+    <div class="section" id="projet-CTA">
+        <h3>Vous avez un projet et cherchez par où commencer ?</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <div id="projet-btns">
+            <button>Développer mon projet</button>
+            <button>Toutes les solutions</button>
+        </div>
+    </div>
+
+    <div id="besoin-hero">
+        <h4>Phrase d'accroche</h4>
+        <img class="illu-section"/>
+        <img id="logo-2"/>
+    </div>
+    <div class="section" id="besoin-CTA">
+        <h3>Vous avez un besoin précis et voulez une solution adaptée ?</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <div id="besoin-btns">
+            <button>Définir mon besoin</button>
+            <button>Toutes les solutions</button>
+        </div>
+    </div>
+  
+</div>
+
+{% endblock %}
+
+{% block highlight %}
+<div class="highlight-section">
+    <div id="proof-1">Commentaire 1</div>
+    <div id="proof-2">Commentaire 2</div>
+    <div id="proof-3">Commentaire 3</div>
+    <h2>Phrase d'accroche</h2>
 </div>
 {% endblock %}
 

@@ -10,9 +10,8 @@
     </head>
     <body>
         <header>
-            <a id="brandLogoHeader"  href="{% url 'core:index' %}">
-                <h3>Logo Cliquable</h3>
-            </a>
+            {% block pageHeader%}
+            {% endblock %}
             
             <div id="navHeader">
                 <select id="headerMenu">
@@ -31,6 +30,9 @@
             {% endblock %}
 
             {% block scrolling %}
+            {% endblock %}
+
+            {% block highlight %}
             {% endblock %}
         </main>
         <footer>

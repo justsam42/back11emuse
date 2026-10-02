@@ -3,7 +3,7 @@
 
 body{
     display: grid;
-    grid-template-rows: 10% 1fr minmax(min-content, max-content);
+    grid-template-rows: 10vh 1fr minmax(min-content, max-content);
     grid-template-areas: 'header' 'main' 'footer';
     background-color: white;
     margin: 0;
@@ -69,22 +69,7 @@ header{
     cursor: pointer;
     }
 
-/* -------  Main elements ------------ */
-.focus-2{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding : 1em;
-    gap : 3vw;
-} 
 
-.focus-3{
-    background-color: rgb(183, 255, 239);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-} 
 
 /* -------  UI ------------ */
 a{
