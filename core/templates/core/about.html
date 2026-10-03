@@ -1,9 +1,42 @@
 {% extends "core/layout.html" %}
+{% load static %}
 
+{% block pageHeader%}
+<a class="home-btn" href="{% url 'core:index' %}">
+    <img height=64 id="logo-mini" src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
+    <div>La Onzième Muse</div>
+</a>
+{% endblock %}
+
+<!-- This is HOME page -->
 {% block landing %}
-<main> 
-    <div class="focus-1">This is the ABOUT page</div>
-    <div class="focus-2"></div>
-    <div class="focus-3"></div>
-</main>
+<div class="focus-1" id="hero-section">
+    <h1>Une nouvelle Muse ... </br>pour un nouvel Art.</h1>
+    <img id="portrait" height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>  
+</div>
+<div class="focus-2" id="targets-section">
+    <a class="trgt-btn" id="target-1" href="#">
+        <h2 >Je suis</h2>
+        <p class="trgt-summary">Une artiste qui a décidé de mettre sontalent au service des personnes qui veulent mettre en oeuvre leur créativité.</p>
+    </a>
+    <a class="trgt-btn" id="target-2" href="#">
+        <h2>J'aime</h2>
+        <p class="trgt-summary">Trouver de nouvelles formes d'expression pour découvrir et décrire les expériences humaines.</p>
+    </a>
+    <a class="trgt-btn" id="target-3" href="#">
+        <h2>J'aspire</h2>
+        <p class="trgt-summary">A faire éclore les talents cachés ou timides est la façon dont je me réalise en tant qu'être vivant. Réveuse, idéaliste ou utopiste sont mes adjectifs préférés.</p>
+    </a>
+</div>
+
+<div class="focus-3" id="value-prop">
+    <img id="logo-plume" height=150 src="{% static 'core/assets/logo/logo-11em-full-grn.png' %}"/>
+    <h3>Pour vous aider à mettre les mots sur vos idées </br> et que rien ne vous échappe. </br> Cherchez la Muse qui soutient la créativité à l'ère du digital !</h3>
+    <div id="btm-btns">
+        <button>Contact</button>
+        <button>Trouvez des réponses</button>
+    </div>
+    
+    
+</div>
 {% endblock %}
