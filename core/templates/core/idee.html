@@ -1,10 +1,11 @@
 {% extends "core/layout.html" %}
+{% load static %}
 
 <!-- This is SERVICES page -->
 {% block pageHeader%}
 <a class="home-btn" href="{% url 'core:index' %}">
     <img height=64 id="logo-mini" src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
-    <div>Vous avez un besoin</div>
+    <div>Vous avez un idée</div>
 </a>
 {% endblock %}
 
@@ -15,25 +16,25 @@
     <img id="portrait" height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>  
 </div>
 
-<div class="focus-2" id="targets-section">
-    <a class="trgt-btn" id="target-1" href="#">
-        <h2 >Vous êtes</h2>
-        <p class="trgt-summary">Une organisation, une institution ou un professionnel qui....</p>
-    </a>
-    <a class="trgt-btn" id="target-2" href="#">
+<nav class="focus-2" id="targets-section">
+    <a class="trgt-btn" id="objectif" href="#idee-resume">
         <h2>Vous avez</h2>
         <p class="trgt-summary">Identifié un manque dans votre environnement professionnel.</p>
     </a>
-    <a class="trgt-btn" id="target-3" href="#">
+    <a class="trgt-btn" id="cible" href="#projet-resume">
+        <h2 >Vous êtes</h2>
+        <p class="trgt-summary">Une organisation, une institution ou un professionnel qui....</p>
+    </a>
+    <a class="trgt-btn" id="besoin" href="{% url 'core:solutions' %}">
         <h2>Vous cherchez</h2>
         <p class="trgt-summary">Des moyens pour concrétiser une solution ou un plan d'action.</p>
     </a>
-</div>
+</nav>
 
 <div class="focus-3" id="value-prop">
     <div id="btm-btns">
-        <button>Identifier ma solution</button>
-        <button>Prendre contact</button>
+        <a href="{% url 'blog:index' %}">Trouver des informations</a>
+        <a href="{% url 'core:contact' %}">Prendre contact</a>
     </div> 
     <h3>Vous pouvez acceder à de nombreuses informations sur le site ou au travers d'un échange.</h3>
     <div>Carroussel blog</div>
@@ -44,7 +45,7 @@
 {% block scrolling %}
 <!-- user clicking ou scrolling pour plus d'infos -->
 <div >
-    <div class="sous-section" id="artiste-resume">
+    <div class="sous-section" id="idee-resume">
         <h2>Comment donner suite à une idée ?</h2>
         
         <h3>Qu'est-ce qu'une idée ?</h3>
@@ -67,7 +68,7 @@
         <img class="illu-section"/>
     </div>
 
-    <div class="sous-section" id="travail-resume">
+    <div class="sous-section" id="projet-resume">
         <h2>Quelle différence entre une idée et un projet ?</h2>
         
         <h3>L'idée est le début de l'aventure.</h3>
@@ -83,7 +84,7 @@
         <p id="entrepreneuriat">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
     </div>
         
-    <div class="sous-section" id="research-resume">
+    <div class="sous-section" id="plan-resume">
         <h2>Pourquoi faire des plans ?</h2>
         
         <h3>L'imprévu n'est pas toujours inattendu.</h3>

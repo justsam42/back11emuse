@@ -7,6 +7,10 @@ app_name="core"
 
 urlpatterns= [
     path("", views.indexHome, name="index"),
-    path("about", views.aboutPage, name="about"),
-    path("services", views.servicesPage, name="services")
+    path("presentation-muse", views.aboutPage, name="presentation"),
+    path("solutions", views.solutionsPage, name="solutions"),
+    path("service-sur-mesure", views.servicePage, name="service"),
+    path("avoir-une-idee", views.ideePage, name="idee"),
+    path("accompagnement-projet", views.projetPage, name="projet"),
+    path("contact", views.contactPage, name="contact"),
 ]

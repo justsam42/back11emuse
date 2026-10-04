@@ -1,4 +1,12 @@
 {% extends "core/layout.html" %}
+{% load static %}
+
+{% block pageHeader%}
+<a class="home-btn" href="{% url 'core:index' %}">
+    <img height=64 id="logo-mini" src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
+    <div>La Onzième Muse</div>
+</a>
+{% endblock %}
 
 {% block landing %}
 <div class="focus-1" id="contact-hero">
@@ -8,11 +16,11 @@
 
 <div class="focus-2" id="contact-CTA">
     <h2>Vous savez presque tout,</br>quelle est la suite du plan ?</h2>
-    <div id="forms-btns">
-        <button>Etablir un devis</button>
-        <button>Prendre rendez-vous</button>
-        <button>Testez les outils</button>
-    </div>
+    <nav id="forms-btns">
+        <a href="{% url 'core:service' %}">Etablir un devis</a>
+        <a href="#contact-msg" >Prendre rendez-vous</a>
+        <a href="{% url 'core:solutions' %}">Testez les outils</a>
+    </nav>
 </div>
 
 <div class="focus-3" id="contact-msg" >

@@ -1,12 +1,15 @@
 {% extends "core/layout.html" %}
 {% load static %}
 
-<!-- This is HOME page -->
+{% block pageHeader%}
+<a class="home-btn" href="{% url 'core:index' %}">
+    <img height=64 id="logo-mini" src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
+    <div>Trouvez votre solution</div>
+</a>
+{% endblock %}
+
 {% block landing %}
 <nav class="focus-1" id="hero-section">
-    <a  href="{% url 'core:index' %}">
-        <img id="logo-full" src="{% static 'core/assets/logo/logo-11em-cocarde.png' %}"/>
-    </a>
     <h1>Ne croyez pas en l'impossible, croyez en vous !</h1>
     <div id="cta-heroSection">
         <a class="cta-btn" href="#">Définir mes besoins</a>
@@ -14,15 +17,15 @@
     </div>    
 </nav>
 <nav class="focus-2" id="targets-section">
-    <a class="trgt-btn" id="target-1" href="#idee-hero">
+    <a class="trgt-btn" id="seconde-cible" href="#focus-idee">
         <h2 >Une idée ?</h2>
         <p class="trgt-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod.</p>
     </a>
-    <a class="trgt-btn" id="target-2" href="#projet-hero">
+    <a class="trgt-btn" id="coeur-cible" href="#focus-projet">
         <h2>Un projet ?</h2>
         <p class="trgt-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod.</p>
     </a>
-    <a class="trgt-btn" id="target-3" href="#besoin-hero">
+    <a class="trgt-btn" id="cible-custom" href="#focus-besoin">
         <h2>Un besoin ? </h2>
         <p class="trgt-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod.</p>
     </a>
@@ -30,10 +33,10 @@
 
 <div class="focus-3" id="value-prop">
     <div id="btm-btns">
-        <a href="{% url 'core:solutions' %}">Trouvez des réponses</a>
-        <a href="{% url 'core:contact' %}">Contact</a>
+        <a href="{% url 'core:solutions' %}">Testez les outils</a>
+        <a href="{% url 'core:contact' %}">Prendre contact</a>
     </div>
-    <h3>Partenaire de votre créativité, j'accompagne </br>et facilite la gestion de vos projets les plus originaux.</h3>
+    <h3>Parce que la vie est une aventure !</h3>
     <img height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>
 </div>
 {% endblock %}
@@ -42,26 +45,22 @@
 <!-- user clicking ou scrolling pour plus d'infos -->
 <div id="scrolling-sections">
 
-    <div id="idee-hero">
-        <h3>Qu'elle apparaisse dans un contexte scientifique, entrepreneurial ou organisationnel : une idée n'est que le début de l'aventure !</h3>
-        <img class="illu-section"/>
-        <img id="logo-1" height=200 src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
-    </div>
-    <div class="section" id="idee-CTA">
+    <div class="section" id="focus-idee">
         <h2>Vous avez une idée </br>et souhaitez la concrétiser ?</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <nav id="idee-btns">
-            <a href="{% url 'core:idee' %}">Formaliser mon idée</a>
+            <a href="{% url 'core:idee' %}">Préciser mon idée</a>
             <a href="{% url 'core:solutions' %}">Toutes les solutions</a>
         </nav>
     </div>
 
-    <div id="projet-hero">
-        <h3>Phrase d'accroche</h3>
+    <div id="idee-blog">
+        <h3>Diaporama articles de blogs</h3>
         <img class="illu-section"/>
-        <img id="logo-2"/>
+        <img class="illu-section"/>
     </div>
-    <div class="section" id="projet-CTA">
+
+    <div class="section" id="focus-projet">
         <h2>Vous avez un projet </br>et cherchez par où commencer ?</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <nav id="projet-btns">
@@ -69,13 +68,13 @@
             <a href="{% url 'core:solutions' %}">Toutes les solutions</a>
         </nav>
     </div>
-
-    <div id="besoin-hero">
-        <h3>Phrase d'accroche</h3>
+    <div id="projet-blog">
+        <h3>Diaporama articles de blogs</h3>
         <img class="illu-section"/>
-        <img id="logo-2"/>
+        <img class="illu-section"/>
     </div>
-    <div class="section" id="besoin-CTA">
+
+    <div class="section" id="focus-besoin">
         <h2>Vous avez un besoin précis </br>et voulez une solution adaptée ?</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <nav id="besoin-btns">
@@ -83,6 +82,12 @@
             <a href="{% url 'core:solutions' %}">Toutes les solutions</a>
         </nav>
     </div>
+    <div id="besoin-blog">
+        <h3>Diaporama articles de blogs</h3>
+        <img class="illu-section"/>
+        <img class="illu-section"/>
+    </div>
+    
 </div>
 
 {% endblock %}
@@ -95,4 +100,3 @@
     <h3>Phrase d'accroche</h3>
 </div>
 {% endblock %}
-

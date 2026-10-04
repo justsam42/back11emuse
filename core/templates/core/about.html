@@ -15,28 +15,28 @@
     <img id="portrait" height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>  
 </div>
 
-<div class="focus-2" id="targets-section">
-    <a class="trgt-btn" id="target-1" href="#">
+<nav class="focus-2" id="character-section">
+    <a class="trgt-btn" id="definition" href="#travail-resume">
         <h2 >Je suis</h2>
-        <p class="trgt-summary">Une artiste qui a décidé de mettre sontalent au service des personnes qui veulent mettre en oeuvre leur créativité.</p>
+        <p class="trgt-summary">Une artiste qui a décidé de mettre son talent au service des personnes qui veulent mettre en oeuvre leur créativité.</p>
     </a>
-    <a class="trgt-btn" id="target-2" href="#">
+    <a class="trgt-btn" id="value" href="#artiste-resume">
         <h2>J'aime</h2>
         <p class="trgt-summary">Trouver de nouvelles formes d'expression pour découvrir et décrire les expériences humaines.</p>
     </a>
-    <a class="trgt-btn" id="target-3" href="#">
+    <a class="trgt-btn" id="goal" href="#research-resume">
         <h2>J'aspire</h2>
         <p class="trgt-summary">A faire éclore les talents cachés ou timides est la façon dont je me réalise en tant qu'être vivant. Réveuse, idéaliste ou utopiste sont mes adjectifs préférés.</p>
     </a>
-</div>
+</nav>
 
 <div class="focus-3" id="value-prop">
     <img id="logo-plume" height=150 src="{% static 'core/assets/logo/logo-11em-full-grn.png' %}"/>
     <h3>Pour vous aider à mettre les mots sur vos idées </br> et que rien ne vous échappe. </br> Cherchez la Muse qui soutient la créativité à l'ère du digital !</h3>
-    <div id="btm-btns">
-        <button>Contact</button>
-        <button>Trouvez des réponses</button>
-    </div>  
+    <nav id="btm-btns">
+        <a href="{% url 'core:contact' %}">Contact</a>
+        <a href="{% url 'core:solutions' %}">Trouvez des réponses</a>
+    </nav>  
 </div>
 {% endblock %}
 

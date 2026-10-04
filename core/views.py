@@ -19,5 +19,17 @@ def indexHome(request):
 def aboutPage(request):
     return render(request, "core/about.html")
 
-def servicesPage(request):
+def solutionsPage(request):
     return render(request, "core/services.html")
+
+def servicePage(request):
+    return render(request, "core/service.html")
+
+def ideePage(request):
+    return render(request, "core/idee.html")
+
+def projetPage(request):
+    return render(request, "core/projet.html")
+
+def contactPage(request):
+    return render(request, "core/contact.html")

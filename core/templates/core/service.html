@@ -1,4 +1,5 @@
 {% extends "core/layout.html" %}
+{% load static %}
 
 <!-- This is SERVICES page -->
 {% block pageHeader%}
@@ -15,26 +16,26 @@
     <img id="portrait" height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>  
 </div>
 
-<div class="focus-2" id="targets-section">
-    <a class="trgt-btn" id="target-1" href="#">
+<nav class="focus-2" id="targets-section">
+    <a class="trgt-btn" id="cible" href="#prospects-types">
         <h2 >Vous êtes</h2>
         <p class="trgt-summary">Une organisation, une institution ou un professionnel qui....</p>
     </a>
-    <a class="trgt-btn" id="target-2" href="#">
+    <a class="trgt-btn" id="objectif" href="#problems-types">
         <h2>Vous avez</h2>
         <p class="trgt-summary">Identifié un axe de changement ou d'évolution de pratiques ou d'environnement</p>
     </a>
-    <a class="trgt-btn" id="target-3" href="#">
+    <a class="trgt-btn" id="besoin" href="#solutions-types">
         <h2>Vous cherchez</h2>
         <p class="trgt-summary">Des conseils ou des outils pour vous aider à initier et developper une démarche perenne.</p>
     </a>
-</div>
+</nav>
 
 <div class="focus-3" id="value-prop">
-    <div id="btm-btns">
-        <button>Identifier ma solution</button>
-        <button>Prendre contact</button>
-    </div> 
+    <nav id="btm-btns">
+        <a href="{% url 'core:solutions' %}">Identifier ma solution</a>
+        <a href="{% url 'core:contact' %}">Prendre contact</a>
+    </nav> 
     <h3>Vous pouvez acceder à de nombreuses informations sur le site ou au travers d'un échange.</h3>
     <div>Carroussel blog</div>
 </div>
@@ -44,7 +45,7 @@
 {% block scrolling %}
 <!-- user clicking ou scrolling pour plus d'infos -->
 <div >
-    <div class="sous-section" id="prospect-types">
+    <div class="sous-section" id="prospects-types">
         <h2>Differents publics</h2>
         
         <h3>Public 1</h3>
@@ -109,10 +110,10 @@
 <div class="highlight-section">
     <img id="logo-plume" height=150 src="{% static 'core/assets/logo/logo-11em-full-grn.png' %}"/>
     <h3>Nous pouvons concevoir ensemble la solution qui vous correspond !</h3>
-    <div id="btm-btns">
-        <button>Etablir un devis</button>
-        <button>Prendre contact</button>
-    </div>  
+    <van id="btm-btns">
+        <a href="{% url 'core:service' %}">Etablir un devis</a>
+        <a href="{% url 'core:contact' %}">Prendre contact</a>
+    </nav>  
 </div>
 {% endblock %}
 

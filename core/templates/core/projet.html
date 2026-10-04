@@ -1,0 +1,116 @@
+{% extends "core/layout.html" %}
+{% load static %}
+
+<!-- This is SERVICES page -->
+{% block pageHeader%}
+<a class="home-btn" href="{% url 'core:index' %}">
+    <img height=64 id="logo-mini" src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
+    <div>Vous avez un projet</div>
+</a>
+{% endblock %}
+
+<!-- This is HOME page -->
+{% block landing %}
+<div class="focus-1" id="hero-section">
+    <h1>Vous avez une idée, et après ?</h1>
+    <img id="portrait" height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>  
+</div>
+
+<nav class="focus-2" id="targets-section">
+    <a class="trgt-btn" id="objectif" href="#idee-resume">
+        <h2>Vous avez</h2>
+        <p class="trgt-summary">Identifié un manque dans votre environnement professionnel.</p>
+    </a>
+    <a class="trgt-btn" id="cible" href="#projet-resume">
+        <h2 >Vous êtes</h2>
+        <p class="trgt-summary">Une organisation, une institution ou un professionnel qui....</p>
+    </a>
+    <a class="trgt-btn" id="besoin" href="{% url 'core:solutions' %}">
+        <h2>Vous cherchez</h2>
+        <p class="trgt-summary">Des moyens pour concrétiser une solution ou un plan d'action.</p>
+    </a>
+</nav>
+
+<div class="focus-3" id="value-prop">
+    <div id="btm-btns">
+        <a href="{% url 'core:solutions' %}">Identifier ma solution</a>
+        <a href="{% url 'core:contact' %}">Prendre contact</a>
+    </div> 
+    <h3>Vous pouvez acceder à de nombreuses informations sur le site ou au travers d'un échange.</h3>
+    <div>Carroussel blog</div>
+</div>
+{% endblock %}
+
+
+{% block scrolling %}
+<!-- user clicking ou scrolling pour plus d'infos -->
+<div >
+    <div class="sous-section" id="idee-resume">
+        <h2>Comment donner suite à une idée ?</h2>
+        
+        <h3>Qu'est-ce qu'une idée ?</h3>
+        <p id="artiste-chant">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+        <img class="illu-section"/>
+        <p id="artiste-chant-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        
+        <h3>Qu'est-ce qu'une bonne idée ?</h3>
+        <img class="illu-section"/>
+        <img class="illu-section"/>
+        <p id="artiste-ecriture">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+        <img class="illu-section"/>
+        <p id="artiste-ecriture-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+    
+        <h3>Que faire une fois l'idée validée ?</h3>
+        <img class="illu-section"/>
+        <p id="artiste-chant">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+    </div>
+
+    <div class="sous-section" id="projet-resume">
+        <h2>Quelle différence entre une idée et un projet ?</h2>
+        
+        <h3>L'idée est le début de l'aventure.</h3>
+        <p id="travail-social">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+
+        <h3>Le projet est l'aventure elle-même.</h3>
+        <img class="illu-section"/>
+        <p id="travail-chr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+
+        <h3>Une aventure est souvent semée d'embûches.</h3>
+        <img class="illu-section"/>
+        <p id="entrepreneuriat">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+    </div>
+        
+    <div class="sous-section" id="plan-resume">
+        <h2>Pourquoi faire des plans ?</h2>
+        
+        <h3>L'imprévu n'est pas toujours inattendu.</h3>
+        <p id="recherche-capital-temps">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+
+        <h3>L'adaptation est souvent la meilleure solution.</h3>
+        <p id="recherche-qvct">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+
+        <h3>La destination est parfois lointaine.</h3>
+        <p id="recherche-edia">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+
+        <h3>Avoir des outils solides permet de tenir la distance.</h3>
+        <p id="recherche-rse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
+        <img class="illu-section"/>
+    </div>  
+</div>
+{% endblock %}
+
+{% block highlight %}
+<div class="highlight-section">
+    <h3>Si on partait à l'aventure ensemble</h3>
+    <div id="proof-1">On commencerait par préciser votre idée.</div>
+    <div id="proof-2">On en ferait un projet.</div>
+    <div id="proof-3">On travaillerait en équipe pour un voyage réussi.</div> 
+</div>
+{% endblock %}
