@@ -1,42 +1,42 @@
 {% extends "core/layout.html" %}
-{% load static %}
 
+<!-- This is SERVICES page -->
 {% block pageHeader%}
 <a class="home-btn" href="{% url 'core:index' %}">
     <img height=64 id="logo-mini" src="{% static 'core/assets/logo/logo-11em-btn.png' %}"/>
-    <div>La Onzième Muse</div>
+    <div>Vous avez un besoin</div>
 </a>
 {% endblock %}
 
 <!-- This is HOME page -->
 {% block landing %}
 <div class="focus-1" id="hero-section">
-    <h1>Une nouvelle Muse ... </br>pour un nouvel Art.</h1>
+    <h1>Vous avez une idée, et après ?</h1>
     <img id="portrait" height=150 src="{% static 'core/assets/femme-foulard-yeux-plafond.jpg' %}"/>  
 </div>
 
 <div class="focus-2" id="targets-section">
     <a class="trgt-btn" id="target-1" href="#">
-        <h2 >Je suis</h2>
-        <p class="trgt-summary">Une artiste qui a décidé de mettre sontalent au service des personnes qui veulent mettre en oeuvre leur créativité.</p>
+        <h2 >Vous êtes</h2>
+        <p class="trgt-summary">Une organisation, une institution ou un professionnel qui....</p>
     </a>
     <a class="trgt-btn" id="target-2" href="#">
-        <h2>J'aime</h2>
-        <p class="trgt-summary">Trouver de nouvelles formes d'expression pour découvrir et décrire les expériences humaines.</p>
+        <h2>Vous avez</h2>
+        <p class="trgt-summary">Identifié un manque dans votre environnement professionnel.</p>
     </a>
     <a class="trgt-btn" id="target-3" href="#">
-        <h2>J'aspire</h2>
-        <p class="trgt-summary">A faire éclore les talents cachés ou timides est la façon dont je me réalise en tant qu'être vivant. Réveuse, idéaliste ou utopiste sont mes adjectifs préférés.</p>
+        <h2>Vous cherchez</h2>
+        <p class="trgt-summary">Des moyens pour concrétiser une solution ou un plan d'action.</p>
     </a>
 </div>
 
 <div class="focus-3" id="value-prop">
-    <img id="logo-plume" height=150 src="{% static 'core/assets/logo/logo-11em-full-grn.png' %}"/>
-    <h3>Pour vous aider à mettre les mots sur vos idées </br> et que rien ne vous échappe. </br> Cherchez la Muse qui soutient la créativité à l'ère du digital !</h3>
     <div id="btm-btns">
-        <button>Contact</button>
-        <button>Trouvez des réponses</button>
-    </div>  
+        <button>Identifier ma solution</button>
+        <button>Prendre contact</button>
+    </div> 
+    <h3>Vous pouvez acceder à de nombreuses informations sur le site ou au travers d'un échange.</h3>
+    <div>Carroussel blog</div>
 </div>
 {% endblock %}
 
@@ -45,15 +45,15 @@
 <!-- user clicking ou scrolling pour plus d'infos -->
 <div >
     <div class="sous-section" id="artiste-resume">
-        <h2>Ma vie d'Artiste</h2>
+        <h2>Comment donner suite à une idée ?</h2>
         
-        <h3>La musique comme un battement du coeur</h3>
+        <h3>Qu'est-ce qu'une idée ?</h3>
         <p id="artiste-chant">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
         <img class="illu-section"/>
         <p id="artiste-chant-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         
-        <h3>Le langage comme l'expression d'une vie</h3>
+        <h3>Qu'est-ce qu'une bonne idée ?</h3>
         <img class="illu-section"/>
         <img class="illu-section"/>
         <p id="artiste-ecriture">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
@@ -61,44 +61,44 @@
         <img class="illu-section"/>
         <p id="artiste-ecriture-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
     
-        <h3>La programmation comme un nouvel instrument</h3>
+        <h3>Que faire une fois l'idée validée ?</h3>
         <img class="illu-section"/>
         <p id="artiste-chant">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
     </div>
 
     <div class="sous-section" id="travail-resume">
-        <h2>Mon expérience professionnelle</h2>
+        <h2>Quelle différence entre une idée et un projet ?</h2>
         
-        <h3>L'impact du social</h3>
+        <h3>L'idée est le début de l'aventure.</h3>
         <p id="travail-social">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
 
-        <h3>le goût des bonnes choses</h3>
+        <h3>Le projet est l'aventure elle-même.</h3>
         <img class="illu-section"/>
         <p id="travail-chr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
 
-        <h3>L'appel de l'aventure</h3>
+        <h3>Une aventure est souvent semée d'embûches.</h3>
         <img class="illu-section"/>
         <p id="entrepreneuriat">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
     </div>
         
     <div class="sous-section" id="research-resume">
-        <h2>Mon travail de recherche</h2>
+        <h2>Pourquoi faire des plans ?</h2>
         
-        <h3>Le bien-être dans les activités humaines</h3>
+        <h3>L'imprévu n'est pas toujours inattendu.</h3>
         <p id="recherche-capital-temps">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
 
-        <h3>La satisfaction dans la vie professionnelle</h3>
+        <h3>L'adaptation est souvent la meilleure solution.</h3>
         <p id="recherche-qvct">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
 
-        <h3>La réalisation individuel comme moteur de l'action</h3>
+        <h3>La destination est parfois lointaine.</h3>
         <p id="recherche-edia">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
 
-        <h3>L'impact social comme objectif de création</h3>
+        <h3>Avoir des outils solides permet de tenir la distance.</h3>
         <p id="recherche-rse">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod, nulla molestias suscipit maxime necessitatibus veniam minima.</p>
         <img class="illu-section"/>
     </div>  
@@ -107,18 +107,10 @@
 
 {% block highlight %}
 <div class="highlight-section">
-    <h3>Phrase d'accroche</h3>
-    <div class="pop-up-diapo" id="more-art">
-        <h4>Creations</h4>
-        <dialog>Portfolio livre AR <b>theme partition , mots, à floral avec enluminure animée</b> </dialog>
-    </div>
-    <div class="pop-up-diapo" id="more-travail">
-        <h4>CV</h4>
-        <dialog>Infographie XP "carte de tendre ou map type crash bandicoot ou plateau de jeu animé"</dialog>
-    </div>
-    <div class="pop-up-diapo" id="more-research">
-        <h4>Reflections</h4>
-        <dialog>theme floral ou grille d'abstract</dialog>
-    </div>
+    <h3>Si on partait à l'aventure ensemble</h3>
+    <div id="proof-1">On commencerait par préciser votre idée.</div>
+    <div id="proof-2">On en ferait un projet.</div>
+    <div id="proof-3">On travaillerait en équipe pour un voyage réussi.</div> 
 </div>
 {% endblock %}
+

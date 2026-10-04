@@ -1,46 +1,56 @@
 {% extends "core/layout.html" %}
 
 {% block landing %}
-    <div>This is the CONTACT page</div>
-    <div class="focus-3" id="contact-section">
-        <div id="contact-hero">
-            <h2>Contact</h2>
-            <div id="photo-contact">Photo de moi</div>
-        </div>
-        <div id="msg-container">
-            <fieldset id="infos-msg">
-                <legend>A propos de vous...</legend>
-                <input 
-                    type="text"
-                    name="first-name" 
-                    placeholder="Prénom"/>
-                <input 
-                    type="text" 
-                    name="last-name" 
-                    placeholder="Nom"/>
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Adresse electronique"/>
-                <input 
-                    type="text" 
-                    list="msg-object" 
-                    placeholder="L'objet de votre message est..."
-                />
-                    <datalist id="msg-object">
-                        <option value="Je ne trouve pas une information.">
-                        <option value="J'ai un besoin particulier."></option>
-                        <option value="Je souhaite établir un partenariat."></option>
-                    </datalist>
-            </fieldset>
-            <textarea name="msg" id="msg-content" 
-                rows="12" columns="64" 
-                required="true"
-                autocapitalize="sentences"
-            > Votre message</textarea>
-            <input 
-                type="submit"/>
-        </div>
-        
+<div class="focus-1" id="contact-hero">
+    <h1>Contact</h1>
+    <div id="photo-contact">Photo de moi</div>
+</div>
+
+<div class="focus-2" id="contact-CTA">
+    <h2>Vous savez presque tout,</br>quelle est la suite du plan ?</h2>
+    <div id="forms-btns">
+        <button>Etablir un devis</button>
+        <button>Prendre rendez-vous</button>
+        <button>Testez les outils</button>
     </div>
+</div>
+
+<div class="focus-3" id="contact-msg" >
+    <h2>Il vous reste des questions :</h2>
+    <fieldset id="infos-sender">
+        <legend>A propos de vous...</legend>
+        <input 
+            type="text"
+            name="first-name" 
+            placeholder="Prénom"/>
+        <input 
+            type="text" 
+            name="last-name" 
+            placeholder="Nom"/>
+        <input 
+            type="email" 
+            name="email" 
+            placeholder="Adresse electronique"/>
+        <input 
+            type="text" 
+            list="msg-object" 
+            placeholder="L'objet de votre message est..."
+        />
+    </fieldset>
+    <fieldset id="msg-container">
+        <datalist id="msg-object">
+            <option value="Je ne trouve pas une information.">
+            <option value="J'ai un besoin particulier."></option>
+            <option value="Je souhaite établir un partenariat."></option>
+        </datalist>
+
+        <textarea name="msg" id="msg-content" 
+            rows="12" columns="64" 
+            required="true"
+            autocapitalize="sentences">Votre message
+        </textarea>
+    </fieldset>
+            
+    <input type="submit"/>
+</div>
 {% endblock %}
