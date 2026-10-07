@@ -157,6 +157,7 @@
         },
     ],
     "highlight" : {
-
+        "highlightId" : "",
+        "highlightContent" : []
     }
 }
