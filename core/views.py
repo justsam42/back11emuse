@@ -1,17 +1,37 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+
 from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+
+from .models import *
+from .serializers import *
 
 # Create your views here.
 
+####----------------API Rest Views for db objects
 
 @api_view(["GET", "POST"])
-def indexHome2(request, format=None):
-    if request.method=="POST":
-        pass
+def text(request, format=None):
 
     if request.method=="GET":
-        return render(request, "index.html")
+        selection = Text.objects.all()
+        serializer = TextSerializer(selection, many=True)
+
+        return Response({ 
+            "texts" : serializer.data
+        })
     
+    if request.method=="POST":
+        newText = TextSerializer(data=request.data)
+        
+        if newText.is_valid():
+            newText.save()
+
+        return Response(newText.data, status=status.HTTP_201 )
+
+####----------------Django Classic Views  
 
 def indexHome(request):
     return render(request, "core/index.html")

@@ -13,4 +13,8 @@ urlpatterns= [
     path("avoir-une-idee", views.ideePage, name="idee"),
     path("accompagnement-projet", views.projetPage, name="projet"),
     path("contact", views.contactPage, name="contact"),
+
+    path("api/texts", views.text, name="texts")
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

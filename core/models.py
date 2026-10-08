@@ -3,6 +3,14 @@ from django.db import models
 
 # Create your models here.
 
+class Type(models.Model):
+    name = models.CharField(max_length=64, null=False)
+    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
+
+    def __str__(self):
+        return f"{self.name} : {self.description}"
+
+
 class Text(models.Model):
     TYPOGRAPHIE = {
         "TITLE" : "Titre",
@@ -12,23 +20,42 @@ class Text(models.Model):
         "DEFAULT" : "Unset"
     } 
 
+    create_type = {
+            "name" : "name",
+            "description" : "xxxxx"
+        }
+
     name = models.CharField(max_length=64, null=False, unique=True)
-    famille = models.CharField(choices=TYPOGRAPHIE, null=False, default="DEFAULT")
+    type = models.ForeignKey('Type', null=False, on_delete=models.PROTECT, default=1)
     description = models.CharField(max_length=128, blank=True)
     content = models.TextField(blank=False, null=False, unique=True)
 
+    def __str__(self):
+        return f"{self.name} ({self.famille}) : {self.description}"
+
 
 class Media(models.Model):
-    media_types = {
+    MEDIA_TYPES = {
         "DOC" : "Document",
         "IMG" : "Image",
         "AUD" : "Audio",
         "VID" : "Video",
+        "DEFAULT" : "Unset"
     }
+
+# TO DO : create a fonction to figure out file type 
+# if value not provided in type(choices=MEDIA_TYPES, null=False, default=type_value())
+# or create TABLE with that function linked to every other tables AS FOREIGN KEY
+
+    """ def type_value():
+
+        file = ""
+        if file.__getattribute__("format"):
+            return  """
 
     name = models.CharField(max_length=64, null=False)
     path = models.CharField(null=True, unique=True, error_messages={"double" : "File already exists in database"}, help_text="Please, indicate a path or url." )
-    type = models.CharField(choices=media_types, null=False)
+    type = models.CharField(choices=MEDIA_TYPES, null=False, default="DEFAULT")
     description = models.CharField(max_length=128, null=False)
 
 
@@ -40,7 +67,7 @@ class Link(models.Model):
         }
     
     name = models.CharField(max_length=64, blank=True, default="Type de lien")
-    label = models.CharField(max_length=128, null=False)
+    label = models.ForeignKey(Text, max_length=128, null=False, default="undefined-link", on_delete=models.PROTECT)
     description = models.CharField(max_length=128, null=False)
     type = models.CharField(choices=link_types, null=False)
     path = models.CharField(null=False, unique=True, error_messages={"double" : "File already exists in database"}, help_text="Please, indicate a path or url." )
@@ -108,8 +135,6 @@ class Bloc(models.Model):
     medias = models.ManyToManyField(Media, related_name="used_in")
     links = models.ManyToManyField(Link, related_name="used_in")
     pointer = models.ManyToManyField(Link, related_name="targets")
-
-
 
 
 
