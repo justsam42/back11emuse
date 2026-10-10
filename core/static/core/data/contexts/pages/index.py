@@ -1,10 +1,4 @@
-texts = {
-    1 : {
-        "name" : "",
-        "categorie" : "catchPhrase",
-        "content" : ""
-    },
-}
+
 
 medias = {
     1: {
