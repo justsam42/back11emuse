@@ -1,1 +1,9 @@
-id,name,famille,description,content
+id,name,nature,type,categorie,description,content
+1,"basic-text-placeholder","text","example","placeholder","Placeholder générique pour toute utilisation","Votre texte ici"
+2,"title-placeholder","text", "example","placeholder","Placeholder pour titre principal, ex : h1.","Titre"
+3,"subtitle-placeholder","text","example", "placeholder","Placeholder pour un sous-titre, tout niveau.", "Sous-titre ou titre de section"
+4,"sentence-placeholder","text", "example","placeholder","Placeholder pour représenter une phrase.","Ceci est une phrase d'accroche de longueur moyenne !"
+5,"paragraphe-placeholder","text", "example","placeholder","Placeholder pour représenter un court paragraphe (175 sec).","Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod."
+6,"services-title","text","Webdesign","generic-vocabulary","Terme générique pour désigner les prestations proposées dans le milieu professionnel","Services"
+7,"tools-title","text","Webdesign","generic-vocabulary","Terme générique pour désigner les outils disponibles pour une personne","Tools"
+8,"about-title","text","Webdesign","generic-vocabulary","Terme générique pour désigner la page 'à propos' d'un site web","About"

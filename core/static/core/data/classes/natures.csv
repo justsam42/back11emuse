@@ -1,0 +1,4 @@
+id,name,description
+1, "entity", "Objet ou 'étant' au sens ontologique. Valeur par défaut de tout objet dont la nature exacte est indéfinie"
+2, "quotient logique", "objet utilisé pour diviser un ensemble, par exemple 'categorie' est un objet qui permet de répartir un ensemble d'objets en sous-ensembles."
+3, "text","Tout objet reposant sur un logique grammaticale ou orthographique"
