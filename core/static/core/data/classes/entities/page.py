@@ -1,12 +1,7 @@
 from django.db import models
-class Text(models.Model):
-    TYPOGRAPHIE = {
-        "TITLE" : "Titre",
-        "CORPS" : "Corps de texte",
-        "LABEL" : "Label",
-        "CTA" : "Call To Action",
-        "DEFAULT" : "Unset"
-    } 
+from core.models import *
+
+class Text(models.Model): 
 
     create_type = {
             "name" : "name",
@@ -14,7 +9,7 @@ class Text(models.Model):
         }
 
     name = models.CharField(max_length=64, null=False, unique=True)
-    nature = models.ForeignKey(models.Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, blank=True)
