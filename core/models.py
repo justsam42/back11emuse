@@ -13,7 +13,7 @@ class Nature(models.Model):
 
 class Type(models.Model):
     name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     description = models.CharField(max_length=128, blank=False, null=False, unique=True)
 
     class Meta:
@@ -25,7 +25,7 @@ class Type(models.Model):
 
 class Categorie(models.Model):
     name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     description = models.CharField(max_length=128, blank=False, null=False, unique=True)
     
@@ -51,7 +51,7 @@ class Text(models.Model):
         }
 
     name = models.CharField(max_length=64, null=False, unique=True)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, blank=True)
@@ -84,7 +84,7 @@ class Media(models.Model):
             return  """
 
     name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, null=False)
@@ -105,10 +105,10 @@ class Link(models.Model):
         }
     
     name = models.CharField(max_length=64, blank=True, default="Type de lien")
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
-    label = models.ForeignKey(Text, max_length=128, null=False, default="undefined-link", on_delete=models.PROTECT)
+    label = models.ForeignKey(Text, max_length=128, null=False, default=1, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, null=False)
     path = models.CharField(null=False, unique=True, error_messages={"double" : "File already exists in database"}, help_text="Please, indicate a path or url." )
     target = models.ForeignKey("Bloc", on_delete=models.CASCADE, null=True )
@@ -136,7 +136,7 @@ class Page(models.Model):
     }
 
     name = models.CharField(max_length=64, null=False, unique=True)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.TextField(max_length=128, blank=False, null=False, unique=True)
@@ -163,7 +163,7 @@ class Section(models.Model):
     } 
 
     name = models.CharField(max_length=64, blank=False, null=False, unique=True)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     title = models.CharField(max_length=64, blank=False, null=False, unique=True, error_messages={"double" : "File already exists in database"} )
@@ -192,7 +192,7 @@ class Bloc(models.Model):
     }
 
     name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, blank=False, null=False, unique=True)
