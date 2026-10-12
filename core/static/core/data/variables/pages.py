@@ -1,73 +1,88 @@
-from core.static.core.data.variables import sections
+from core.static.core.data.variables import blocs
 
 pages = [
     {
-        "meta-data" : {
-            "page_nature" : "interactive",
-            "page_type" : "website",
-            "categorie" : "index",
-        },
-        "attributes" : {
-            "id" : "objectId",
-            "name" : "website-11emuse-index-page", # format (Note 5)
-            "description" : "",
-            "location" : [
-                {
-                    "to_root" : "",
-                    "to_self" : "/my-name-or-id",
-                    "to_relatives" : [
-                        {
-                            "id" : "objectId",
-                            "relation_type" : '',
-                            "location" : [
-                                "to_root", 
-                                "to_self", 
-                                "to_common_relatives"
-                            ]
-                        },
-                    ]
-                }
-            ]
-        },
+        "name" : "website-11emuse-index-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "index",
+        "description" : "Page d'accueil du site internet de la Onzième Muse",
         "value" :[
-            sections[1],
-            sections[2],
-            sections[3]
+            blocs[1],
+            blocs[2],
+            blocs[3]
         ]
     },
     {
-        "meta-data" : {
-            "page_nature" : "interactive",
-            "page_type" : "website",
-            "categorie" : "services",
-        },
-        "attributes" : {
-            "id" : "objectId",
-            "name" : "website-11emuse-services-page", # format (Note 5)
-            "description" : "",
-            "location" : [
-                {
-                    "to_root" : "",
-                    "to_self" : "/my-name-or-id",
-                    "to_relatives" : [
-                        {
-                            "id" : "objectId",
-                            "relation_type" : '',
-                            "location" : [
-                                "to_root", 
-                                "to_self", 
-                                "to_common_relatives"
-                            ]
-                        },
-                    ]
-                }
-            ]
-        },
+        "name" : "website-11emuse-services-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "services",
+        "description" : "Page services du site internet de la Onzième Muse",
         "value" :[
-            sections[1],
-            sections[2],
-            sections[3]
+            blocs[1],
+            blocs[2],
+            blocs[3]
+        ]
+    },
+    {
+        "name" : "website-11emuse-about-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "about",
+        "description" : "Page à propos du site internet de la Onzième Muse",
+        "value" :[
+            blocs[1],
+            blocs[2],
+            blocs[3]
+        ]
+    },
+    {
+        "name" : "website-11emuse-contact-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "contact",
+        "description" : "Page services du site internet de la Onzième Muse",
+        "value" :[
+            blocs[1],
+            blocs[2],
+            blocs[3]
+        ]
+    },
+    {
+        "name" : "website-11emuse-services-idee-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "focus-service",
+        "description" : "Page d'informations sur la prestation pour les idées du site internet de la Onzième Muse",
+        "value" :[
+            blocs[1],
+            blocs[2],
+            blocs[3]
+        ]
+    },
+    {
+        "name" : "website-11emuse-services-projet-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "focus-service",
+        "description" : "Page d'informations sur la prestation pour les projets du site internet de la Onzième Muse",
+        "value" :[
+            blocs[1],
+            blocs[2],
+            blocs[3]
+        ]
+    },
+    {
+        "name" : "website-11emuse-services-service-page", # format (Note 5)
+        "nature" : "interactive",
+        "type" : "website",
+        "categorie" : "focus-service",
+        "description" : "Page d'informations sur la prestation à la carte du site internet de la Onzième Muse",
+        "value" :[
+            blocs[1],
+            blocs[2],
+            blocs[3]
         ]
     }
 ]
-

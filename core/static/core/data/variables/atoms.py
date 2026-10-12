@@ -1,61 +1,28 @@
 atoms = [
    { 
-       "meta-data" : {
-            "data_nature" : "litterary",
-            "data_type" : "string",
-            "categorie" : "short-string",
-       },
-       "attributes" : {
-            "id" : "objectId",
-            "name" : "website-title-11emuse", # format (Note 1)
-            "description" : "",
-            "location" : [
-                {
-                    "to_root" : "",
-                    "to_self" : "/my-name-or-id",
-                    "to_relatives" : [
-                        {
-                            "id" : "objectId",
-                            "relation_type" : '',
-                            "location" : [
-                                "to_root", 
-                                "to_self", 
-                                "to_common_relatives"
-                            ]
-                        },
-                    ]
-                }
-            ]
-        },
-        "value" : ["Ceci est une string."] 
+        "name" : "website-title-11emuse", # format (Note 1)
+        "nature" : "litterary",
+        "type" : "string",
+        "categorie" : "short-string",
+        "description" : "",
+        "value" : ["Ceci est une string."]
     },
-    { 
-        "meta-data" : {
-            "data_nature" : "ltterary",
-            "data_type" : "string",
-            "categorie" : "link",
-        },
-        "attributes" : {
-            "id" : "objectId",
-            "name" : "website-link-11emuse", # format (Note 1)
-            "description" : "",
-        },
+    {
+        "name" : "website-link-11emuse", # format (Note 1)
+        "nature" : "ltterary",
+        "type" : "string",
+        "categorie" : "link",
+        "description" : "",
         "value" :["Ceci est le path absolu d'un link"]
     },
-    { 
-        "meta-data" : {
-            "data_nature" : "graphique",
-            "data_type" : "medias",
-            "categorie" : "image",
-        },
-        "attributes" : {
-            "id" : "objectId",
-            "name" : "website-icon-11emuse", # format (Note 1)
-            "description" : "",
-        },
+    {
+        "name" : "website-icon-11emuse", # format (Note 1)
+        "nature" : "graphique",
+        "type" : "medias",
+        "categorie" : "image",
+        "description" : "",
         "value" :["Ceci est le path de cette image" ]
-    },
-    
+    }  
 ]
 
 ######## Notes :

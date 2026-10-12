@@ -99,7 +99,7 @@ class Location(Coordinates):
         locations = []
         for i in instance[i]:
             if i == attribute:
-                locations.append(cls(instance["name"]))
+                locations.append(cls(instance.name))
                 return locations
             else:
                 raise KeyError("No object with that name")      
