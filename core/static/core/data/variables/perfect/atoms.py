@@ -1,5 +1,71 @@
 atoms = [
-   { 
+    { 
+        "meta-data" :{
+            "data_nature" : "litterary",
+            "data_type" : "character",
+            "categorie" : "alphabet romain",
+        },
+        "attributes":{
+            "name" : "roman-alphabet-letter-6", # format (Note 1)
+            "description" : "Sixième lettre de l'alphabet romain, appelée 'f' ou 'F' en majuscule",
+            "location" : [
+                        {
+                            "to_root" : "",
+                            "to_self" : "/my-name-or-id",
+                            "to_relatives" : [
+                                {
+                                    "id" : "objectId",
+                                    "relation_type" : '',
+                                    "location" : [
+                                        "to_root", 
+                                        "to_self", 
+                                        "to_common_relatives"
+                                    ]
+                                },
+                            ]
+                        }
+                    ],
+            "position" : {
+                "grid" : {
+                    "start_line" : 1,
+                    "end_line" : 1,
+                    "start_col" : 0,
+                    "end_col" : 0
+                },
+                "origin" : {
+                    "x" : 0,
+                    "y" : "",
+                    "z" : ""
+                },
+                "box" : {}
+            },
+            "style" : {}
+        }, 
+        "value" : {
+            "unicode" : "",
+            "hexadecimal" : "",
+            "ASCII" : "",
+            "binary" : "",
+            "representations" : {
+                "renders": [
+                    "application/json",
+                    "text/html"
+                ],
+                "formats" : [
+                    "api",
+                    "json"
+                ],
+                "parses": [
+                    "application/json",
+                    "application/x-www-form-urlencoded",
+                    "multipart/form-data"
+                ],
+                "dictionnaries" : ["roman-alphabet[6]", "some-other-dict"], 
+                "libraries" : []
+            }
+        } 
+    },
+    { 
        "meta-data" : {
             "data_nature" : "litterary",
             "data_type" : "string",
