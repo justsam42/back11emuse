@@ -83,7 +83,7 @@ texts = [
         "name" : "targetMain-value-summary-11emuse", # format (Note 1)
         "nature" : "paragraphe",
         "type" : "summary",
-        "categorie" : "value proposiiton",
+        "categorie" : "value prop",
         "description" : "Resumé de la proposition de valeur pour la cible principale de l'entreprise la Onzième Muse",
         "value" : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus consequuntur similique nisi inventore excepturi culpa iusto sed soluta doloribus error ea adipisci quod."
     }

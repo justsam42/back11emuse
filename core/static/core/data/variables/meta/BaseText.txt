@@ -1,8 +1,17 @@
 BaseString(object)
+    +-- Character (attributes=["dictionnaries"])
     +-- Word (+ attributes = ["definition", "signified_objects"])
     +-- Sentence (+ attributes=["punc_signs_use", "gram_struct", "classification"] )
     |   +-- Paragraphe (+ attributes=["sentences_count", "function"])
     |   |   +-- Text (+ attributes=["new_line_count", "file_format"])
     |   |   |   +-- txt
     |   |   |   +-- html
-                
+BaseFile (object)
+    +-- Digital
+    |   +-- Media     
+            +-- Text
+            +-- Image
+            +-- Audio
+                +-- Video
+   
+
