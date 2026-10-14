@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<head>
+    <title>API</title>
+</head>
+
+<body>
+    <header>
+        <h1>Page INDEX de l'API static</h1>
+    </header>
+    <main>
+        {% for objet in objets %}
+        <a href="{% url 'core:objet' objet=objet.location %}">
+            <h2>{{objet.name}}</h2>
+        </a>
+        {% endfor %}
+    </main>  
+</body>
+

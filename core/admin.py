@@ -6,6 +6,7 @@ from .models import *
 
 admin.site.register(Nature),
 admin.site.register(Type),
+admin.site.register(Classe),
 admin.site.register(Categorie),
 admin.site.register(Text),
 admin.site.register(Link),

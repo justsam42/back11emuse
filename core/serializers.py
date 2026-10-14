@@ -1,6 +1,33 @@
 from rest_framework import serializers
 from .models import *
 
+
+class NatureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Nature
+        fields = '__all__'
+
+
+class TypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Type
+        fields = '__all__'
+
+
+class ClasseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Classe
+        fields = '__all__'
+
+
+class CategorieSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Categorie
+        fields = '__all__'
+
+
+
+
 class TextSerializer(serializers.ModelSerializer):
     class Meta:
         model = Text

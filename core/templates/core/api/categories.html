@@ -1,0 +1,18 @@
+{% extends "core/api/layout.html" %}
+
+{% block main %}
+
+<h2>Categories</h2>
+<ol>
+    {% for categorie in categories %}
+    <li>
+        <ul>
+            <h3>{{categorie.name}}</h3>
+            <li><i>Aucune description</i></li>
+        </ul> 
+    </li>
+    <br/>
+    {% endfor %}
+</ol>
+
+{% enblock %}

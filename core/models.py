@@ -22,11 +22,39 @@ class Type(models.Model):
     def __str__(self):
         return f"{self.name}({self.nature.__getattribute__("name")}) : {self.description}"
 
-
-class Categorie(models.Model):
+class Classe(models.Model):
     name = models.CharField(max_length=64, null=False)
     nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
+    
+    class Meta:
+            ordering = ['type','name']
+
+    def __str__(self):
+        return f"{self.name} ({self.type.__getattribute__("name")}) : {self.description}"
+    
+
+class Categorie(models.Model):
+    name = models.CharField(max_length=64, null=False)
+    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
+    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
+    
+    class Meta:
+            ordering = ['type','name']
+
+    def __str__(self):
+        return f"{self.name} ({self.type.__getattribute__("name")}) : {self.description}"
+
+
+class Attribute(models.Model):
+    name = models.CharField(max_length=64, null=False)
+    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
+    categorie = models.ForeignKey(Categorie, null=False, on_delete=models.PROTECT, default=1)
     description = models.CharField(max_length=128, blank=False, null=False, unique=True)
     
     class Meta:
@@ -51,8 +79,9 @@ class Text(models.Model):
         }
 
     name = models.CharField(max_length=64, null=False, unique=True)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
+    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
     type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
     categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, blank=True)
     content = models.TextField(blank=False, null=False, unique=True)

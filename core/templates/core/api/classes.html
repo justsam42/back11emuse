@@ -1,0 +1,16 @@
+{% extends "core/api/layout.html" %}
+
+{% block main %}
+<h2>Classes</h2>
+<ol>
+    {% for classe in classes %}
+    <li>
+        <ul>
+            <h3>{{classe.name}}</h3>
+            <li><i>Aucune description</i></li>
+        </ul> 
+    </li>
+    <br/>
+    {% endfor %}
+</ol>
+{% endblock%}

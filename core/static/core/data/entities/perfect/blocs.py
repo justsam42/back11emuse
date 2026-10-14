@@ -1,4 +1,4 @@
-from core.static.core.data.variables import atoms
+from core.static.core.data.variables import texts
 
 blocs = [
     { 
@@ -30,8 +30,8 @@ blocs = [
             ]
         },
         "value" : [  
-            atoms[1], 
-            atoms[3]
+            texts[1], 
+            texts[3]
         ]   # Note 3 : Content Acces -- > les atoms ? 
     },
     { 
@@ -63,8 +63,8 @@ blocs = [
             ]
         },
         "value" : [  
-            atoms[1], 
-            atoms[3]
+            texts[1], 
+            texts[3]
         ]   # Note 3 : Content Acces -- > les atoms ? 
     }
 ]

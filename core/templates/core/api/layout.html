@@ -1,0 +1,18 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>API - Objets</title>
+    </head>
+    <body>
+        <header>
+            <h1>Page CONTENT d'un OBJET</h1>
+            <a href="{% url 'core:api_index' %}">Tous les objets</a>
+        </header>
+        <main>
+         {% block main %}
+         {% endblock %}
+        </main>  
+    </body>
+</html>
