@@ -1,4 +1,5 @@
 {% load static%}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,8 +8,19 @@
     </head>
     <body>
         <header>
-            <h1>Page CONTENT d'un OBJET</h1>
-            <a href="{% url 'core:api_index' %}">Tous les objets</a>
+            <h1> Mon API</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'core:api_index' %}"> Tous les objets</a>
+                    </li>
+                    {% for filter in filters %}
+                    <li>
+                        <a href="{% url 'core:objet' filter.location %}">{{filter.name}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
         </header>
         <main>
          {% block main %}

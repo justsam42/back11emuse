@@ -16,7 +16,7 @@ urlpatterns= [
 
     path("api/index", views.api_index, name="api_index"),
     path("api/test", views.api_test, name="api_test"),
-    path("api/<str:objet>", views.objet, name="objet"),
+    path("api/<str:name>", views.objet, name="objet"),
 
     path("api/texts", views.text, name="texts")
 ]

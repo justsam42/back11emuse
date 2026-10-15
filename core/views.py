@@ -9,49 +9,65 @@ from .models import *
 from .serializers import *
 
 
-from core.static.core.data.population.lists import attributes, natures, types, classes, categories
+from core.static.core.data.population.lists.classes import classes
+from core.static.core.data.population.lists.categories import categories
+from core.static.core.data.population.lists.foundations import natures, types
+
 # Create your views here.
 
 ####----------------API Rest Views for db objects
 
-objets = {
-    "natures" : {
+  
+objets = [
+    {
         "name" : "Natures",
-        "location" : "natures",
-        "content" : natures.natures
+        "location" : "nature",
+        "content" : natures
     },
-    "types" : {
+    {
         "name" : "Types",
-        "location" : "types",
-        "content" : types.types,
+        "location" : "type",
+        "content" : types,
     },
-    "classes" : {
+    {
         "name" : "Classes",
-        "location" : "classes",
-        "content" : classes.classes,
+        "location" : "classe",
+        "content" : classes,
     },
-    "categories" : {
+    {
         "name" : "Categories",
-        "location" : "categories",
-        "content" : categories.categories
-    },
-    
-}
+        "location" : "categorie",
+        "content" : categories
+    }
+]
 
 def api_test(request):
     ...
 
 def api_index(request):
-    return render(request, "core/api/api_index.html", 
+    return render(request, "core/api/index.html", 
         {
             "objets" : objets
         }
     )
 
-def objet(request, objet):
+def objet(request, name=""):
+
+    objet = {}
+    message = ""
+
+    for i in objets: 
+
+        if i["location"] == name:
+            objet = i
+        else :
+            message = "No object found."
+
     return render(request, "core/api/objet.html", 
         {
-            "objet" : objets[objet]
+            "filters" : objets,
+            "objet" : objet,
+            "message" : message
         }
     )
 
