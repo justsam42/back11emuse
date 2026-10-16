@@ -4,10 +4,7 @@ from .models import *
 
 # Register your models here.
 
-admin.site.register(Nature),
-admin.site.register(Type),
-admin.site.register(Classe),
-admin.site.register(Categorie),
+
 admin.site.register(Text),
 admin.site.register(Link),
 admin.site.register(Media),

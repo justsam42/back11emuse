@@ -1,68 +1,7 @@
 from django.db import models
 
 
-# Create your models here.
-
-class Nature(models.Model):
-    name = models.CharField(max_length=64, null=False)
-    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
-
-    def __str__(self):
-        return f"{self.name} : {self.description}"
-
-
-class Type(models.Model):
-    name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
-
-    class Meta:
-        ordering = ['nature','name']
-                
-    def __str__(self):
-        return f"{self.name}({self.nature.__getattribute__("name")}) : {self.description}"
-
-class Classe(models.Model):
-    name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
-    
-    class Meta:
-            ordering = ['type','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}) : {self.description}"
-    
-
-class Categorie(models.Model):
-    name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
-    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
-    
-    class Meta:
-            ordering = ['type','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}) : {self.description}"
-
-
-class Attribute(models.Model):
-    name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=False, on_delete=models.PROTECT, default=1)
-    description = models.CharField(max_length=128, blank=False, null=False, unique=True)
-    
-    class Meta:
-            ordering = ['type','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}) : {self.description}"
-    
+# Create your models here.  
 
 class Text(models.Model):
     TYPOGRAPHIE = {
@@ -79,18 +18,13 @@ class Text(models.Model):
         }
 
     name = models.CharField(max_length=64, null=False, unique=True)
-    nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
+    #nature = models.ForeignKey(Nature, null=False, on_delete=models.PROTECT, default=1)
+    #type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    #classe = models.ForeignKey(Classe, null=False, on_delete=models.PROTECT, default=1)
+    #categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, blank=True)
     content = models.TextField(blank=False, null=False, unique=True)
 
-    class Meta:
-        ordering = ['type', 'categorie','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}, {self.categorie.__getattribute__("name")} ) : {self.description}"
 
 
 class Media(models.Model):
@@ -113,17 +47,12 @@ class Media(models.Model):
             return  """
 
     name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
+    #nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
+    #type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    #categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, null=False)
     path = models.CharField(null=True, unique=True, error_messages={"double" : "File already exists in database"}, help_text="Please, indicate a path or url." )
     
-    class Meta:
-            ordering = ['type', 'categorie','name']
-    
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}, {self.categorie.__getattribute__("name")} ) : {self.description}"
 
 
 class Link(models.Model):
@@ -134,19 +63,14 @@ class Link(models.Model):
         }
     
     name = models.CharField(max_length=64, blank=True, default="Type de lien")
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
+    #nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
+    #type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    #categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     label = models.ForeignKey(Text, max_length=128, null=False, default=1, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, null=False)
     path = models.CharField(null=False, unique=True, error_messages={"double" : "File already exists in database"}, help_text="Please, indicate a path or url." )
     target = models.ForeignKey("Bloc", on_delete=models.CASCADE, null=True )
 
-    class Meta:
-        ordering = ['type', 'categorie','name']
-    
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}, {self.categorie.__getattribute__("name")} ) : {self.description}"
 
 
 
@@ -165,20 +89,15 @@ class Page(models.Model):
     }
 
     name = models.CharField(max_length=64, null=False, unique=True)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
+    #nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
+    #type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    #categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.TextField(max_length=128, blank=False, null=False, unique=True)
     sections = models.ManyToManyField(
         symmetrical=False,
         related_name="used_in", 
         to="Section")
 
-    class Meta:
-        ordering = ['type', 'categorie','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}, {self.categorie.__getattribute__("name")} ) : {self.description}"
     
 
 
@@ -192,9 +111,9 @@ class Section(models.Model):
     } 
 
     name = models.CharField(max_length=64, blank=False, null=False, unique=True)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
+    #nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
+    #type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    #categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     title = models.CharField(max_length=64, blank=False, null=False, unique=True, error_messages={"double" : "File already exists in database"} )
     subtitle = models.CharField(max_length=128, blank=True, null=True)
     description = models.TextField(max_length=128, blank=False, null=False, unique=True)
@@ -202,12 +121,6 @@ class Section(models.Model):
         to="Bloc",
         symmetrical=False,
         related_name="used_in")
-
-    class Meta:
-        ordering = ['type', 'categorie','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}, {self.categorie.__getattribute__("name")} ) : {self.description}"
 
 
 
@@ -221,22 +134,15 @@ class Bloc(models.Model):
     }
 
     name = models.CharField(max_length=64, null=False)
-    nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
-    type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
-    categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
+    #nature = models.ForeignKey('Nature', null=False, on_delete=models.PROTECT, default=1)
+    #type = models.ForeignKey(Type, null=False, on_delete=models.PROTECT, default=1)
+    #categorie = models.ForeignKey(Categorie, null=True, on_delete=models.PROTECT)
     description = models.CharField(max_length=128, blank=False, null=False, unique=True)
     texts = models.ManyToManyField(Text, related_name="used_in")
     medias = models.ManyToManyField(Media, related_name="used_in")
     links = models.ManyToManyField(Link, related_name="used_in")
     pointer = models.ManyToManyField(Link, related_name="targets")
 
-    class Meta:
-        ordering = ['type', 'categorie','name']
-
-    def __str__(self):
-        return f"{self.name} ({self.type.__getattribute__("name")}, {self.categorie.__getattribute__("name")} ) : {self.description}"
-
-
-
+   
 
 
